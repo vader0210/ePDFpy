@@ -8,23 +8,23 @@ import numpy as np
 os.environ['QT_MAC_WANTS_LAYER'] = '1'
 np.seterr(divide='ignore', invalid='ignore')
 
-# def main():
-#     os.environ['QT_MAC_WANTS_LAYER'] = '1'
-#     np.seterr(divide='ignore', invalid='ignore')
-#
-#     qtapp = QtWidgets.QApplication.instance()
-#     if not qtapp:
-#         qtapp = QtWidgets.QApplication(sys.argv)
-#     # qdarktheme.setup_theme("auto")
-#     app = ui_main.DataViewer()
-#     app.show()
-#     sys.exit(qtapp.exec_())
+def main():
+    os.environ['QT_MAC_WANTS_LAYER'] = '1'
+    np.seterr(divide='ignore', invalid='ignore')
 
-if __name__ == '__main__':
-    # main()
     qtapp = QtWidgets.QApplication.instance()
     if not qtapp:
         qtapp = QtWidgets.QApplication(sys.argv)
+    # qdarktheme.setup_theme("auto")
     app = ui_main.DataViewer()
     app.show()
     sys.exit(qtapp.exec_())
+
+if __name__ == '__main__':
+    main()
+    # qtapp = QtWidgets.QApplication.instance()
+    # if not qtapp:
+    #     qtapp = QtWidgets.QApplication(sys.argv)
+    # app = ui_main.DataViewer()
+    # app.show()
+    # sys.exit(qtapp.exec_())
